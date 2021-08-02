@@ -67,6 +67,7 @@ public class placeValidationSteps extends Utilities {
 	@Then("API call is success with status code {int}")
 	public void api_call_is_success_with_status_code(Integer int1) {
 	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("API call success !! - New update");
 	    assertEquals(response.getStatusCode(), 200);
 	}
 
