@@ -67,8 +67,7 @@ public class placeValidationSteps extends Utilities {
 	@Then("API call is success with status code {int}")
 	public void api_call_is_success_with_status_code(Integer int1) {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("API call success !! - New update");
-	    assertEquals(response.getStatusCode(), 200);
+		 assertEquals(response.getStatusCode(), 200);
 	}
 
 	@And("{string} in response body is {string}")
@@ -82,6 +81,7 @@ public class placeValidationSteps extends Utilities {
 	@And("Verify place_id created with {string} in {string}")
 	public void verify_place_id_created_with_in(String expectedName, String resource) throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Place ID Validation");
 		 place_id=getJsonValue(response, "place_id");
 		 finalReq=given().spec(RequestSpecificationDetails()).queryParam("place_id",place_id);
 		 called_using_http_request(resource,"GET");
