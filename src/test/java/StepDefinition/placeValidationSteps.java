@@ -90,6 +90,7 @@ public class placeValidationSteps extends Utilities {
 	@Given("Delete place Payload")
 	public void delete_place_Payload() throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Delete Place API");
 		 finalReq=given().spec(RequestSpecificationDetails()).body(testData.deletePayload(place_id));
 	    
 	}

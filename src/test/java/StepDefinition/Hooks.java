@@ -10,7 +10,7 @@ public class Hooks {
 	@Before("@DeletePlace")
 	public void preConditions() throws IOException {
 		//execute when place_id is null
-		System.out.println("Hooks");
+		System.out.println("Hooks added");
 		placeValidationSteps validateSteps=new placeValidationSteps();
 		if(placeValidationSteps.place_id==null)
 		{
